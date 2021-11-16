@@ -241,3 +241,49 @@ class test_10(unittest.TestCase):
         finally:
             return
 
+        
+# test_11 for testing a invalid input of float number to know if it is prime
+class test_11(unittest.TestCase):
+    def runTest(self):
+
+        try:
+            response = tester("2", "1234.0806")
+            expected = False
+            msg = f"The answer returned is not as per the expectation, it is {response}"
+            self.assertEqual(response, expected, msg)
+
+            print("\nTEST-11 PASS : The returned answer is correct as expected", response)
+            print(
+                "\n========================================================================\n")
+        except Exception as ex:
+            print('\n\nTEST-11 FAIL', ex)
+            print(
+                "\n========================================================================\n")
+
+        finally:
+            return
+
+
+
+# test_12 for testing character input for power calculator
+class test_12(unittest.TestCase):
+    def runTest(self):
+
+        try:
+            response = Powertester("3", "accdfkufkfnlfflk", 5)
+            expected = -28153056843
+            msg = f"The answer returned is not as per the expectation, it is {response}"
+            self.assertEqual(response, expected, msg)
+
+            print("\nTEST-12 PASS : The returned answer is correct as expected", response)
+            print(
+                "\n========================================================================\n")
+        except Exception as ex:
+            print('\n\nTEST-12 FAIL', ex)
+            print(
+                "\n========================================================================\n")
+
+        finally:
+            return
+
+
