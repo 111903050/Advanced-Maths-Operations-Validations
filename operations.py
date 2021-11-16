@@ -58,3 +58,40 @@ def power(N, P):
             return (N*power(N, P-1))
     except Exception as ex:
         print("unable to calculate power", ex)
+
+def tester(choice, number):
+
+    if(choice == "1"):
+        if(number.isnumeric()):
+            print("Entered binary number to convert to decimal is: ", number)
+            flag = 1
+            for i in number:
+                if(i != "1" and i != "0"):
+                    flag = 0
+                    break
+                else:
+                    continue
+            if(flag == 0):
+                print("\nError:Please enter a valid input consisting of only 0's and 1's")
+                return "fail"
+
+            ans = binToDec(number)
+            return ans
+        else:
+            print("Entered binary number to convert to decimal is: ", number)
+            print("\nError:Please enter a valid input consisting of only integers")
+            return "fail"
+
+    if(choice == "2"):
+        if(number.isnumeric()):
+            print("Entered number to check for prime is: ", number)
+            ans = isPrime(number)
+            return ans
+        elif(number[0]== "-"):
+            print("Error: Cannot check a negative number for prime number")
+            return "fail"
+        else:
+            print("Entered number to check for prime is: ", number)
+            print("\nError:Please enter a valid input consisting of only integers")
+            return "fail"
+
