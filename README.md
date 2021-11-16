@@ -3,6 +3,7 @@
  
 # Requirements
 - Python 3.5 or later versions
+- installed unittest library module for testing
 
 # Operations handled
 - Binary to decimal conversion
