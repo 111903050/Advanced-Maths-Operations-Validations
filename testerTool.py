@@ -350,3 +350,74 @@ class test_15(unittest.TestCase):
         finally:
             return
 
+
+# test_16 for testing a bigger number to know if it is perfect Square
+class test_16(unittest.TestCase):
+    def runTest(self):
+
+        try:
+            response = tester("4", "593456789921788945786383649834947123456789")
+            expected = True
+            msg = f"The answer returned is not as per the expectation, it is {response}"
+            self.assertEqual(response, expected, msg)
+
+            print("\nTEST-16 PASS : The returned answer is correct as expected", response)
+            print(
+                "\n========================================================================\n")
+        except Exception as ex:
+            print('\n\nTEST-16 FAIL', ex)
+            print(
+                "\n========================================================================\n")
+
+        finally:
+            return
+
+
+# test_17 for testing a invalid input of characters to know if it is perfect Square
+class test_17(unittest.TestCase):
+    def runTest(self):
+
+        try:
+            response = tester("4", "59345abjdskodjdoisddjdhdkusyddkjdjygddjhgujuth12345")
+            expected = True
+            msg = f"The answer returned is not as per the expectation, it is {response}"
+            self.assertEqual(response, expected, msg)
+
+            print("\nTEST-17 PASS : The returned answer is correct as expected", response)
+            print(
+                "\n========================================================================\n")
+        except Exception as ex:
+            print('\n\nTEST-17 FAIL', ex)
+            print(
+                "\n========================================================================\n")
+
+        finally:
+            return
+
+
+# test_18 for testing a invalid input of float number to know if it is perfect Square
+class test_18(unittest.TestCase):
+    def runTest(self):
+
+        try:
+            response = tester("4", "1234.0806")
+            expected = False
+            msg = f"The answer returned is not as per the expectation, it is {response}"
+            self.assertEqual(response, expected, msg)
+
+            print("\nTEST-18 PASS : The returned answer is correct as expected", response)
+            print(
+                "\n========================================================================\n")
+        except Exception as ex:
+            print('\n\nTEST-18 FAIL', ex)
+            print(
+                "\n========================================================================\n")
+
+        finally:
+            return
+
+
+if __name__ == "__main__":
+
+    unittest.main()
+
