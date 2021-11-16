@@ -106,3 +106,72 @@ class test_04(unittest.TestCase):
         finally:
             return
 
+#testing prime function
+
+# test_05 for testing a simple number to know if it is prime
+class test_05(unittest.TestCase):
+    def runTest(self):
+
+        try:
+            response = tester("2", "59")
+            expected = True
+            msg = f"The answer returned is not as per the expectation, it is {response}"
+            self.assertEqual(response, expected, msg)
+
+            print("\nTEST-05 PASS : The returned answer is correct as expected", response)
+            print(
+                "\n========================================================================\n")
+        except Exception as ex:
+            print('\n\nTEST-05 FAIL', ex)
+            print(
+                "\n========================================================================\n")
+
+        finally:
+            return
+
+
+# test_06 for testing a bigger number to know if it is prime
+class test_06(unittest.TestCase):
+    def runTest(self):
+
+        try:
+            response = tester("2", "593456789921788945786383649834947123456789")
+            expected = True
+            msg = f"The answer returned is not as per the expectation, it is {response}"
+            self.assertEqual(response, expected, msg)
+
+            print("\nTEST-06 PASS : The returned answer is correct as expected", response)
+            print(
+                "\n========================================================================\n")
+        except Exception as ex:
+            print('\n\nTEST-06 FAIL', ex)
+            print(
+                "\n========================================================================\n")
+
+        finally:
+            return
+
+
+
+# test_07 for testing a invalid input of characters to know if it is prime
+class test_07(unittest.TestCase):
+    def runTest(self):
+
+        try:
+            response = tester("2", "59345abjdskodjdoisddjdhdkusyddkjdjygddjhgujuth12345")
+            expected = True
+            msg = f"The answer returned is not as per the expectation, it is {response}"
+            self.assertEqual(response, expected, msg)
+
+            print("\nTEST-07 PASS : The returned answer is correct as expected", response)
+            print(
+                "\n========================================================================\n")
+        except Exception as ex:
+            print('\n\nTEST-07 FAIL', ex)
+            print(
+                "\n========================================================================\n")
+
+        finally:
+            return
+
+
