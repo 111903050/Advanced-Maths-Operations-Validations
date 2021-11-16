@@ -95,3 +95,15 @@ def tester(choice, number):
             print("\nError:Please enter a valid input consisting of only integers")
             return "fail"
 
+def Powertester(choice, num1, num2):
+
+    if(choice == "3"):
+        if(isinstance(num1, int) and isinstance(num2, int)):
+            print("Entered numbers are: ", num1, num2)
+            ans = power(num1, num2)
+            return ans
+        else:
+            print("Entered numbers are: ", num1, num2)
+            print("\nError:Please enter a valid input consisting of only integers")
+            return "fail"
+
