@@ -12,12 +12,12 @@
 - Check if given number is a Perfect Square
 
 
-#Features 
--Automated Testing Tool
--Robust testing for various type of inputs for the functions
--easy to understand and debug test case interface 
+# Features 
+- Automated Testing Tool
+- Robust testing for various type of inputs for the functions
+- easy to understand and debug test case interface 
 
 # Compilation Instructions
--Clone the the project in your remote system
--install necessary library ie unittest
+- Clone the the project in your remote system
+- install necessary library ie unittest
 - Then run the command : ` python3 testerTool.py ` in the command line interface
