@@ -3,17 +3,17 @@ import unittest
 from operations import tester, Powertester
 
 
-print("================================================================")
+print("===================================================================")
 print("#        Hello and welcome to automated operations tester!        #")
-print("#                                                          #")
-print("#                  Maths Functions                    #")
-print("# 1- Convert Binary to Decimal.                            #")
-print("# 2- Check if a number is Prime.                            #")
-print("# 3- calculate the Power of given numbers                               #")
-print("# 4- Find the power of Number                              #")
+print("#                                                                 #")
+print("#                  Maths Functions                                #")
+print("# 1- Convert Binary to Decimal.                                   #")
+print("# 2- Check if a number is Prime.                                  #")
+print("# 3- calculate the Power of given numbers                         #")
+print("# 4- Check if given number is perfect square                      #")
 print("# q- Exit .                       #")
-print("#                                                          #")
-print("=================================================================\n\n")
+print("#                                                                 #")
+print("===================================================================\n\n")
 
 
 # test_01 for testing proper simple binary string input
@@ -173,5 +173,71 @@ class test_07(unittest.TestCase):
 
         finally:
             return
+# test_08 for testing a invalid input of negative number to know if it is prime
+class test_08(unittest.TestCase):
+    def runTest(self):
 
+        try:
+            response = tester("2", "-123489273")
+            expected = False
+            msg = f"The answer returned is not as per the expectation, it is {response}"
+            self.assertEqual(response, expected, msg)
+
+            print("\nTEST-08 PASS : The returned answer is correct as expected", response)
+            print(
+                "\n========================================================================\n")
+        except Exception as ex:
+            print('\n\nTEST-08 FAIL', ex)
+            print(
+                "\n========================================================================\n")
+
+        finally:
+            return
+
+
+#testing power function
+
+# test_09 for testing simple numbers power calculator
+class test_09(unittest.TestCase):
+    def runTest(self):
+
+        try:
+            response = Powertester("3", 12, 3)
+            expected = 1728
+            msg = f"The answer returned is not as per the expectation, it is {response}"
+            self.assertEqual(response, expected, msg)
+
+            print("\nTEST-09 PASS : The returned answer is correct as expected", response)
+            print(
+                "\n========================================================================\n")
+        except Exception as ex:
+            print('\n\nTEST-09 FAIL', ex)
+            print(
+                "\n========================================================================\n")
+
+        finally:
+            return
+
+
+
+# test_10 for testing negative number power calculator
+class test_10(unittest.TestCase):
+    def runTest(self):
+
+        try:
+            response = Powertester("3", -123, 5)
+            expected = -28153056843
+            msg = f"The answer returned is not as per the expectation, it is {response}"
+            self.assertEqual(response, expected, msg)
+
+            print("\nTEST-10 PASS : The returned answer is correct as expected", response)
+            print(
+                "\n========================================================================\n")
+        except Exception as ex:
+            print('\n\nTEST-10 FAIL', ex)
+            print(
+                "\n========================================================================\n")
+
+        finally:
+            return
 
