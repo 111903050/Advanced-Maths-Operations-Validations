@@ -285,5 +285,68 @@ class test_12(unittest.TestCase):
 
         finally:
             return
+# test_13 for testing float input for power calculator
+class test_13(unittest.TestCase):
+    def runTest(self):
 
+        try:
+            response = Powertester("3", 123.038, 5)
+            expected = 12.34
+            msg = f"The answer returned is not as per the expectation, it is {response}"
+            self.assertEqual(response, expected, msg)
+
+            print("\nTEST-13 PASS : The returned answer is correct as expected", response)
+            print(
+                "\n========================================================================\n")
+        except Exception as ex:
+            print('\n\nTEST-13 FAIL', ex)
+            print(
+                "\n========================================================================\n")
+
+        finally:
+            return
+
+
+
+# test_14 for testing bigger numbers for power calculator
+class test_14(unittest.TestCase):
+    def runTest(self):
+
+        try:
+            response = Powertester("3",9, 123)
+            expected = 12.34
+            msg = f"The answer returned is not as per the expectation, it is {response}"
+            self.assertEqual(response, expected, msg)
+
+            print("\nTEST-14 PASS : The returned answer is correct as expected", response)
+            print(
+                "\n========================================================================\n")
+        except Exception as ex:
+            print('\n\nTEST-14 FAIL', ex)
+            print(
+                "\n========================================================================\n")
+
+        finally:
+            return
+        
+# test_15 for testing a simple number to know if it is perfect Square
+class test_15(unittest.TestCase):
+    def runTest(self):
+
+        try:
+            response = tester("4", "16")
+            expected = True
+            msg = f"The answer returned is not as per the expectation, it is {response}"
+            self.assertEqual(response, expected, msg)
+
+            print("\nTEST-15 PASS : The returned answer is correct as expected", response)
+            print(
+                "\n========================================================================\n")
+        except Exception as ex:
+            print('\n\nTEST-15 FAIL', ex)
+            print(
+                "\n========================================================================\n")
+
+        finally:
+            return
 
