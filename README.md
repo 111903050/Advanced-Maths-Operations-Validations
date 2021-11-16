@@ -1,5 +1,5 @@
 # Advanced-Maths-Operations-Validations
- - A testing tool developed in python for Advanced mathematical operations.
+ - Automated testing tool developed in python for Advanced mathematical operations.
  
 # Requirements
 - Python 3.5 or later versions
