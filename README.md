@@ -8,6 +8,7 @@
 - Binary to decimal conversion
 - Checking for the prime number
 - Power of the given number
+- Check if given number is a Perfect Square
 
 # Compilation Instructions
-- The most basic way to run the program is ` python3 testertool.py `
+- The most basic way to run the program is ` python3 testerTool.py `
