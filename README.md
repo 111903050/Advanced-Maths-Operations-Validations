@@ -3,7 +3,7 @@
  
 # Requirements
 - Python 3.5 or later versions
-- Input unittest library module for testing
+- Import unittest library module for testing
 
 # Operations handled
 - Binary to decimal conversion
@@ -15,9 +15,9 @@
 # Features 
 - Automated Testing Tool
 - Robust testing for various type of inputs for the functions
-- easy to understand and debug test case interface 
+- Easy to understand and debug test case interface 
 
 # Compilation Instructions
 - Clone the the project in your remote system
-- install necessary library ie unittest
+- Install necessary library ie unittest
 - Then run the command : ` python3 testerTool.py ` in the command line interface
